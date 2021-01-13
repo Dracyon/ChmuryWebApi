@@ -15,12 +15,10 @@
 
   <ItemGroup>
     <Reference Include="AppointmentWebApp.Core">
-      <HintPath>..\..\..\Chmury\AppoitmentWebApp.Core\bin\Debug\netcoreapp3.1\AppointmentWebApp.Core.dll</HintPath>
-      <Private>true</Private>
+      <HintPath>..\lib\AppointmentWebApp.Core.dll</HintPath>
     </Reference>
     <Reference Include="AppointmentWebApp.Data">
-      <HintPath>..\..\..\Chmury\AppoitmentWebApp.Data\bin\Debug\netcoreapp3.1\AppointmentWebApp.Data.dll</HintPath>
-      <Private>true</Private>
+      <HintPath>..\lib\AppointmentWebApp.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
 
