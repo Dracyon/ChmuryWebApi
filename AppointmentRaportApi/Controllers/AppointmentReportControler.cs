@@ -1,4 +1,5 @@
-﻿using AppoitmentWebApp.Data;
+﻿using AppoitmentWebApp.Core;
+using AppoitmentWebApp.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace AppointmentRaportApi.Controllers
 {
 	[ApiController]
-	[Route("[controller]")]
+	[Route("appointmentreport")]
 	public class AppointmentReportControler : ControllerBase
 	{
 		private readonly ILogger<AppointmentReportControler> _logger;
@@ -22,15 +23,26 @@ namespace AppointmentRaportApi.Controllers
 		}
 
 		[HttpGet]
-		public IEnumerable<IAppointmentData> Get()
+		public List<AppointmentReport> Get()
 		{
 			var allAppointments = appointmentData.GetAppointmentByName(string.Empty);
 
 			var onlyMarkedAppointments = allAppointments.
-				Where(a => a.IsAvaiable == false && !string.IsNullOrEmpty(a.UserName));
+				Where(a => a.IsAvaiable == false && !string.IsNullOrEmpty(a.UserName)).ToList();
 
+			var ReportData = new List<AppointmentReport>();
 
-			return (IEnumerable<IAppointmentData>)onlyMarkedAppointments;
+			foreach (var appointment in onlyMarkedAppointments)
+			{
+				ReportData.Add(new AppointmentReport
+				{
+					AppointmentName = appointment.AppointmentName,
+					AppointmentDate = appointment.AppointmentDate,
+					AppointedPerson = appointment.UserName
+				});
+			}
+
+			return ReportData;
 		}
 	}
 }
