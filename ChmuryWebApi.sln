@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChmuryWebApi", "ChmuryWebApi\ChmuryWebApi.csproj", "{AD829696-B418-47A1-961A-B198498BE008}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentRaportApi", "AppointmentRaportApi\AppointmentRaportApi.csproj", "{9BBCB940-B51B-47A3-9FBD-E862D87930D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AD829696-B418-47A1-961A-B198498BE008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD829696-B418-47A1-961A-B198498BE008}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD829696-B418-47A1-961A-B198498BE008}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD829696-B418-47A1-961A-B198498BE008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BBCB940-B51B-47A3-9FBD-E862D87930D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BBCB940-B51B-47A3-9FBD-E862D87930D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BBCB940-B51B-47A3-9FBD-E862D87930D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BBCB940-B51B-47A3-9FBD-E862D87930D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
