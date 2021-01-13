@@ -1,4 +1,5 @@
 using AppointmentWebApp.Data;
+using AppoitmentWebApp.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +32,7 @@ namespace AppointmentRaportApi
 			{
 				options.UseSqlServer(Configuration.GetConnectionString("AppointsmentDb"));
 			});
+			services.AddScoped<IAppointmentData, SqlAppointmentData>();
 			services.AddControllers();
 		}
 
